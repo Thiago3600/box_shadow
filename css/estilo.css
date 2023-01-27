@@ -1,0 +1,107 @@
+body {
+    background-color: #ffffff;
+}
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+.box {
+    margin: 0;
+    border: unset;
+    box-shadow: unset;
+    overflow: hidden;
+    background-color: inherit;
+    min-height: 80vh;
+    display: grid;
+    grid-template-rows: 33% 1fr 33%;
+    grid-template-columns: 10% 1fr 10%;
+    grid-template-areas: 'boxTop boxTop boxColor' 'boxLeft boxCenter boxRight' 'boxBottom boxBottom boxBottom';
+    align-items: center;
+    justify-items: center;
+}
+
+div {
+    border-radius: 10px;
+    padding: 5px;
+    border: solid hsl(0, 0%, 100%) 1px;
+    margin: 20px;
+}
+
+.color {
+    justify-self: end;
+    grid-area: boxColor;
+    width: fit-content;
+}
+
+.color img {
+    padding-left: 5px;
+    padding-right: 0px;
+}
+
+.color input {
+    width: 100%;
+}
+
+.inset {
+    border: unset;
+    display: flex;
+    font-size: 24px;
+    align-items: center;
+    align-self: flex-end;
+    grid-area: boxTop;
+}
+
+.offSetX,
+.offSetY,
+.shadowBlur,
+.color {
+    box-shadow: 0px 0px 10px;
+}
+
+.offSetX input,
+.offSetY input,
+.shadowBlur input {
+    max-width: 70px;
+    box-shadow: inset 0px 0px 4px;
+}
+
+.offSetX {
+    justify-self: end;
+    grid-area: boxRight;
+}
+
+.offSetY {
+    align-self: flex-start;
+    grid-area: boxBottom;
+}
+
+.shadowBlur {
+    justify-self: start;
+    grid-area: boxLeft;
+}
+
+input {
+    font-size: 16px;
+}
+
+
+/* input type[range]{
+    background: -moz-radial-gradient();
+} */
+
+.boxShadow {
+    grid-area: boxCenter;
+    background: url(../img/madeira.jpg);
+    border-radius: unset;
+    width: 40%;
+    min-height: 40vh;
+    border: unset;
+    box-shadow: unset;
+    /* box-shadow: 5px 0 1em green; */
+}
+
+.red {
+    /* color: hsl(219, 100%, 50%); */
+}
